@@ -1,0 +1,16 @@
+input.ng-invalid.ng-touched {
+  border: 1px solid #DA3637;
+}
+
+input.ng-valid.ng-touched {
+  border: 1px solid #509D12;
+}
+
+p.error.validationerror {
+  color: red;
+  padding-bottom: 10px;
+}
+
+h3 {
+  margin-bottom: 30px;
+}

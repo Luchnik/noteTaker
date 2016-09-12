@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>noteTaker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Bootstrap -->
+  <script src="js/lib/bootstrap/bootstrap.min.js"></script>
+
+  <!-- AngularJS -->
+  <script src="js/lib/angular/angular.min.js"></script>
+  <script src="js/lib/angular/angular-route.min.js"></script>
+  <script src="js/lib/angular/angular-animate.min.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/controllers/registration.js"></script>
+  <script src="js/controllers/success.js"></script>
+
+</head>
+
+<body>
+  <header ng-include="'views/nav.html'">
+  </header>
+
+  <div class="container">
+    <main ng-view>
+    </main>
+  </div>
+</body>
+</html>
