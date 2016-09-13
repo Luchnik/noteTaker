@@ -30,6 +30,10 @@ myApp.factory('Authentication', ['$rootScope', '$firebaseAuth', '$firebaseObject
       return auth.$unauth();
     },
 
+    requireAuth: function() {
+      return auth.$requireAuth();
+    },
+
     register: function(user) {
       auth.$createUser({
         email: user.email,
