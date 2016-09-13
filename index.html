@@ -29,6 +29,11 @@
   </header>
 
   <div class="container">
+
+    <div class="alert alert-success" ng-show="currentUser">
+      <span>Hello {{ currentUser.firstname }}</span>
+    </div>
+
     <main ng-view>
     </main>
   </div>
