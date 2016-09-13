@@ -30,8 +30,9 @@
 
   <div class="container">
 
-    <div class="alert alert-success" ng-show="currentUser">
+    <div class="alert alert-success" ng-show="currentUser" ng-controller="RegistrationController">
       <span>Hello {{ currentUser.firstname }}</span>
+      <a ng-href="#/login" ng-click="logout()">logout</a>
     </div>
 
     <main ng-view>
