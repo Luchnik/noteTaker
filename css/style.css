@@ -33,6 +33,17 @@ h2 span {
   color: #5cb85c;
 }
 
+li.list-group-item {
+  min-width: 250px;
+}
+
 button.btn-warning {
   margin-right: 5px;
+}
+
+.edit-input {
+  max-width: 205px;
+  margin-right: 5px;
+  height: 23px;
+  border-color: #ec971f;
 }

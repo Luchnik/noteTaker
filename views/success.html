@@ -20,7 +20,11 @@
     <ul class="list-group" ng-repeat="(key, task) in tasks">
       <li class="list-group-item">{{ task.name }}
         <button class="btn btn-danger btn-xs pull-right" ng-click="deleteTask(key)">Delete</button>
-        <button class="btn btn-warning btn-xs pull-right" ng-click="editTask(key)">Edit</button>&nbsp
+        <button type="submit" class="btn btn-warning btn-xs pull-right"
+          ng-click="editTask(key, task)">Edit</button>&nbsp
+        <input class="form-control pull-right edit-input"
+          type="text" placeholder="Rename task and click 'edit'"
+          name="edittask" ng-model="task.edittask">&nbsp
       </li>
     </ul>
   </div>

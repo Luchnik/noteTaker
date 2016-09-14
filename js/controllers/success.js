@@ -33,6 +33,15 @@ myApp.controller('SuccessController',
         $scope.deleteTask = function(key) {
           tasksInfo.$remove(key);
         } //delete note
+
+        $scope.editTask = function(key, task) {
+          // gets the old record and reassigns to new one
+          $scope.tasks[key].name = task.edittask;
+          $scope.tasks.$save(key).then(function() {
+            task.edittask = '';
+          });
+
+        }
       }
     });
 
