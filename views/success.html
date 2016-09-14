@@ -1,11 +1,11 @@
-<h1>My notes</h1>
+<h2>My tasks</h2>
 
 <div class="container">
-  <form name="myform" ng-submit="addNote()" novalidate>
+  <form name="myform" ng-submit="addTask()" novalidate>
     <div class="form-group">
       <div class="col-xs-4">
-        <input class="form-control input-lg" placeholder="Write a note and type +"
-          type="text" name="notename" ng-model="notename" ng-required="true">
+        <input class="form-control input-lg" placeholder="Write a task and type +"
+          type="text" name="taskname" ng-model="taskname" ng-required="true">
       </div>
       <div class="col-xs-2">
         <button type="submit" class="btn btn-success btn-lg" ng-disabled="myform.$invalid">+</button>
@@ -15,9 +15,9 @@
 </div>
 
 <div class="container">
-  <ul class="list-group" ng-repeat="(key, note) in notes">
-    <li class="list-group-item">{{ note.name }}
-      <button class="btn btn-danger btn-xs pull-right" ng-click="deleteNote(key)">Delete</button>
+  <ul class="list-group" ng-repeat="(key, task) in tasks">
+    <li class="list-group-item">{{ task.name }}
+      <button class="btn btn-danger btn-xs pull-right" ng-click="deleteTask(key)">Delete</button>
     </li>
   </ul>
 </div>

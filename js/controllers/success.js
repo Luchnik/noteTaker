@@ -7,22 +7,22 @@ myApp.controller('SuccessController',
 
     auth.$onAuth(function(authUser) {
       if (authUser) {
-        var notesRef = new Firebase(FIREBASE_URL + 'users/' + $rootScope.currentUser.$id + '/notes');
-        var notesInfo = $firebaseArray(notesRef);
+        var tasksRef = new Firebase(FIREBASE_URL + 'users/' + $rootScope.currentUser.$id + '/tasks');
+        var tasksInfo = $firebaseArray(tasksRef);
 
-        $scope.notes = notesInfo;
+        $scope.tasks = tasksInfo;
 
-        $scope.addNote = function() {
-          notesInfo.$add({
-            name: $scope.notename,
+        $scope.addTask = function() {
+          tasksInfo.$add({
+            name: $scope.taskname,
             date: Firebase.ServerValue.TIMESTAMP
           }).then(function() {
-            $scope.notename = '';
+            $scope.taskname = '';
           });
         } // add note
 
-        $scope.deleteNote = function(key) {
-          notesInfo.$remove(key);
+        $scope.deleteTask = function(key) {
+          tasksInfo.$remove(key);
         } //delete note
       }
     });
