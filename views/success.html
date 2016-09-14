@@ -1,2 +1,13 @@
-<h1>My notes</h1>
-<p>{{ message }}</p>
+  <h1>My notes</h1>
+
+  <form name="myform" ng-submit="addNote()" novalidate>
+    <div class="form-group">
+      <div class="col-xs-4">
+        <input class="form-control input-lg" placeholder="Write a note and type +"
+          type="text" name="notename" ng-model="notename" ng-required="true">
+      </div>
+      <div class="col-xs-2">
+        <button type="submit" class="btn btn-success btn-lg" ng-disabled="myform.$invalid">+</button>
+      </div>
+    </div>
+  </form>
