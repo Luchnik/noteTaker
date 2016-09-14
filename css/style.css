@@ -23,16 +23,16 @@ h3 {
   color: #286090;
 }
 
-div.col-xs-4 {
+div.col-xs-10 {
   padding-left: 0px;
   padding-right: 0px;
   margin-bottom: 20px;
 }
 
-li.list-group-item {
-  width: 600px;
-}
-
 h2 span {
   color: #5cb85c;
+}
+
+button.btn-warning {
+  margin-right: 5px;
 }

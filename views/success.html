@@ -4,7 +4,7 @@
 <div class="container">
   <form name="myform" ng-submit="addTask()" novalidate>
     <div class="form-group">
-      <div class="col-xs-4">
+      <div class="col-xs-10">
         <input class="form-control input-lg" placeholder="Write a task and type +"
           type="text" name="taskname" ng-model="taskname" ng-required="true">
       </div>
@@ -16,9 +16,12 @@
 </div>
 
 <div class="container">
-  <ul class="list-group" ng-repeat="(key, task) in tasks">
-    <li class="list-group-item">{{ task.name }}
-      <button class="btn btn-danger btn-xs pull-right" ng-click="deleteTask(key)">Delete</button>
-    </li>
-  </ul>
+  <div class="col-xs-10">
+    <ul class="list-group" ng-repeat="(key, task) in tasks">
+      <li class="list-group-item">{{ task.name }}
+        <button class="btn btn-danger btn-xs pull-right" ng-click="deleteTask(key)">Delete</button>
+        <button class="btn btn-warning btn-xs pull-right" ng-click="editTask(key)">Edit</button>&nbsp
+      </li>
+    </ul>
+  </div>
 </div>
