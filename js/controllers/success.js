@@ -12,6 +12,15 @@ myApp.controller('SuccessController',
 
         $scope.tasks = tasksInfo;
 
+        // how many tasks
+        tasksInfo.$loaded().then(function(data) {
+          $rootScope.howManyTasks = tasksInfo.length;
+        });
+
+        tasksInfo.$watch(function(data) {
+          $rootScope.howManyTasks = tasksInfo.length;
+        });
+
         $scope.addTask = function() {
           tasksInfo.$add({
             name: $scope.taskname,

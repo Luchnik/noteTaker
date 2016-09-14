@@ -1,4 +1,5 @@
-<h2>My tasks</h2>
+<h2>My tasks <span ng-show="howManyTasks">{{ howManyTasks }}</span>
+</h2>
 
 <div class="container">
   <form name="myform" ng-submit="addTask()" novalidate>

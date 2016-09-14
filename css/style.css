@@ -32,3 +32,7 @@ div.col-xs-4 {
 li.list-group-item {
   width: 600px;
 }
+
+h2 span {
+  color: #5cb85c;
+}
