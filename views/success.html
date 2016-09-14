@@ -1,5 +1,6 @@
-  <h1>My notes</h1>
+<h1>My notes</h1>
 
+<div class="container">
   <form name="myform" ng-submit="addNote()" novalidate>
     <div class="form-group">
       <div class="col-xs-4">
@@ -11,3 +12,12 @@
       </div>
     </div>
   </form>
+</div>
+
+<div class="container">
+  <ul class="list-group" ng-repeat="(key, note) in notes">
+    <li class="list-group-item">{{ note.name }}
+      <button class="btn btn-danger btn-xs pull-right" ng-click="deleteNote(key)">Delete</button>
+    </li>
+  </ul>
+</div>

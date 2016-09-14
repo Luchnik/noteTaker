@@ -10,6 +10,8 @@ myApp.controller('SuccessController',
         var notesRef = new Firebase(FIREBASE_URL + 'users/' + $rootScope.currentUser.$id + '/notes');
         var notesInfo = $firebaseArray(notesRef);
 
+        $scope.notes = notesInfo;
+
         $scope.addNote = function() {
           notesInfo.$add({
             name: $scope.notename,
@@ -18,6 +20,10 @@ myApp.controller('SuccessController',
             $scope.notename = '';
           });
         } // add note
+
+        $scope.deleteNote = function(key) {
+          notesInfo.$remove(key);
+        } //delete note
       }
     });
 

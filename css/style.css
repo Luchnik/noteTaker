@@ -26,4 +26,9 @@ h3 {
 div.col-xs-4 {
   padding-left: 0px;
   padding-right: 0px;
+  margin-bottom: 20px;
+}
+
+li.list-group-item {
+  width: 600px;
 }
